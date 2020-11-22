@@ -27,11 +27,21 @@ fi
 echo "enter email-id"
 read email
 pat1="^[a-zA-Z0-9]+[@][a-zA-Z]+[.]([a-z|A-Z]{2}[.][a-zA-Z]{2,})|([a-zA-Z]{2,})"
-if [[ $email=~ $pat1 ]]
+if [[ $email =~ $pat1 ]]
 then
 	echo "$email is valid email"
 else
 	echo "not valid email"
 fi
 
+
+echo "enter mobile number"
+read number
+pat2="^91[ ]?[6-9]{1}[0-9]{9}$"
+if [[ $number =~ $pat2 ]]
+then
+	echo "$number is valid mobile number"
+else
+	echo "not a valid mobile number"
+fi
 
