@@ -45,3 +45,15 @@ else
 	echo "not a valid mobile number"
 fi
 
+
+echo "enter password"
+read "password"
+pass="^(?=.{8,}$)(?=.*\d)(?=.*[A-Z])[a-zA-Z0-9]*[\@\#\^][a-zA-Z0-9]*$"
+if [[ $password =~ $pass ]]
+then
+	echo "$password is valid password"
+else
+	echo "not valid password"
+fi
+
+
